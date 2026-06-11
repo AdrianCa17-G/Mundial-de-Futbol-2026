@@ -1,5 +1,16 @@
-# Mundial-de-Futbol-2026
+# Mundial de Futbol 2026
 Taller Grupal
+## Equipo de Desarrollo
+
+| Integrante | Rol |
+|------------|-----|
+| Anthony Godoy | Diagrama UML|
+| Adrian Guaman | Documentación del sistema |
+| Daniel Vargas | Desarrollo del código fuente |
+
+## Se evaluó al grupo 3 y se le asignó una nota de | 10 | 
+
+---
 ## Descripción
 Sistema orientado a objetos que simula la gestión de un Mundial de Fútbol. Permite registrar selecciones nacionales con sus plantillas (futbolistas y entrenadores), simular partidos de la fase de grupos y generar una tabla de posiciones con los clasificados.
 
@@ -18,7 +29,7 @@ Proyecto desarrollado como parte de un taller académico con enfoque en los pila
 
 ### Jerarquía de Clases
 
-<img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Diagrama_UML/Diagrama_UML.jpg" alt="Texto alternativo" width="700"/>
+<img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Diagrama_UML/Diagrama_UML.jpeg" alt="Texto alternativo" width="700"/>
 
 ##  Clases y Responsabilidades
 
@@ -75,3 +86,19 @@ Se crean las cuatro selecciones del grupo, se asignan entrenadores a Ecuador y A
 <img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Codigo/5_Presentacion.jpeg" alt="Texto alternativo" width="700"/>
 
 ##  Ejecución del Código
+<img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Codigo/6_Ejecucion.jpeg" alt="Texto alternativo" width="700"/>
+<img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Codigo/6.1_Ejecucion.jpeg" alt="Texto alternativo" width="700"/>
+
+
+##  Reflexiones del Equipo
+
+**¿Por qué usar herencia en este sistema?**
+La herencia nos permitió evitar repetir atributos como `nombre`, `edad` y `pasaporte` en cada clase. Al centralizar esos datos en `Persona`, cualquier cambio en la estructura base se propaga automáticamente a `Futbolista` y `Entrenador`, haciendo el sistema más mantenible.
+
+**¿Qué ventaja ofrece el encapsulamiento en la simulación?**
+Al hacer `puntos` un atributo privado de `Seleccion` y solo modificarlo mediante `sumarPuntos()`, garantizamos que ninguna parte del código pueda asignar puntos arbitrariamente. La lógica de negocio (3 puntos por ganar, 1 por empate) queda centralizada en `Partido.asignarPuntos()`, haciendo el sistema más robusto y fácil de auditar.
+
+**¿Qué representa la clase `Partido` en términos de POO?**
+`Partido` es un ejemplo de **composición**: no hereda de ninguna clase, sino que *usa* objetos de tipo `Seleccion` para operar. Esto muestra que la herencia no es la única relación entre clases; la composición es igualmente poderosa cuando una clase necesita coordinar el comportamiento de otras.
+
+---
