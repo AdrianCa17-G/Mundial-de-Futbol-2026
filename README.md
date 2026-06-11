@@ -37,6 +37,41 @@ Agrupa a un `Entrenador` y un `plantel` de futbolistas bajo un `nombrePais`. Lle
 ### `Partido`
 Enfrenta a dos selecciones. Almacena los goles de cada equipo (`golesLocal`, `golesVisitante`) y determina el resultado con `calcularResultado()`, que se encarga de sumar los puntos correspondientes a cada selección.
 
-## 🔗 Relaciones entre Clases
+##  Relaciones entre Clases
 
 `Futbolista` y `Entrenador` heredan de `Persona`. Una `Seleccion` está compuesta por un plantel de `Futbolistas` y tiene asociado un `Entrenador`. Un `Partido` referencia a exactamente dos `Selecciones` para simular el enfrentamiento.
+
+#  Descripción del Código
+
+**Clase `Persona`**
+Superclase base. Guarda `nombre` y `edad` como atributos privados.
+
+**Clase `Entrenador`**
+Hereda de `Persona`. Agrega el atributo `estrategia` y usa `super()` para inicializar los datos del padre.
+
+<img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Codigo/1_Clases.jpeg" alt="Texto alternativo" width="700"/>
+
+**Clase `Seleccion`**
+Representa a un equipo. Maneja de forma encapsulada los `puntos`, `goles_favor` y `goles_contra`. Tiene tres métodos para registrar resultados: `registrar_victoria()` suma 3 puntos, `registrar_empate()` suma 1, y `registrar_derrota()` no suma ninguno. También permite asignar un entrenador con `asignar_entrenador()`.
+
+<img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Codigo/2_Clases.jpeg" alt="Texto alternativo" width="700"/>
+<img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Codigo/2.1_Clases.jpeg" alt="Texto alternativo" width="700"/>
+
+**Clase `Grupo`**
+Agrupa exactamente 4 selecciones. El método `get_tabla()` ordena los equipos por puntos y diferencia de goles usando el algoritmo de burbuja, luego imprime la tabla de posiciones en consola.
+
+<img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Codigo/3_Clases.jpeg" alt="Texto alternativo" width="700"/>
+<img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Codigo/3.1_Tabla.jpeg" alt="Texto alternativo" width="700"/>
+
+**Clase `Partido`**
+Enfrenta a dos selecciones. El método `jugar_partido()` recibe las listas de goles de cada equipo, muestra el resultado en consola y llama al método correspondiente en cada selección según quien ganó, perdió o empató.
+
+<img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Codigo/4_Clases.jpeg" alt="Texto alternativo" width="700"/>
+<img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Codigo/4.1_Clases.jpeg" alt="Texto alternativo" width="700"/>
+
+**Bloque principal**
+Se crean las cuatro selecciones del grupo, se asignan entrenadores a Ecuador y Alemania, se arma el grupo A y se simula un partido entre Ecuador y Alemania enviando los goles con el nombre del jugador, posición y minuto. Al final se imprime la tabla.
+
+<img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Codigo/5_Presentacion.jpeg" alt="Texto alternativo" width="700"/>
+
+##  Ejecución del Código
