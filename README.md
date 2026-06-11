@@ -16,9 +16,10 @@ Proyecto desarrollado como parte de un taller académico con enfoque en los pila
 ---
 ##  Arquitectura del Sistema
 
+### Jerarquía de Clases
+
 <img src="https://github.com/AdrianCa17-G/Mundial-de-Futbol-2026/blob/main/Diagrama_UML/Diagrama_UML.jpg" alt="Texto alternativo" width="700"/>
 
-### Jerarquía de Clases
 ##  Clases y Responsabilidades
 
 ### `Persona` — Superclase
