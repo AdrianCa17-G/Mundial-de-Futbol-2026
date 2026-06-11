@@ -8,7 +8,7 @@ Taller Grupal
 | Adrian Guaman | Documentación del sistema |
 | Daniel Vargas | Desarrollo del código fuente |
 
-## Se evaluó al grupo 3 y se le asignó una nota de | 10 | 
+## Adrian Guaman evaluó al grupo 3 y se le asignó una nota de | 10 | 
 
 ---
 ## Descripción
